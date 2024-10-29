@@ -41,39 +41,15 @@ const PriceOptions = () => {
                 "Free access to fitness app"
             ]
         },
-        {
-            "id": 4,
-            "name": "Family Membership",
-            "price": 99.99,
-            "features": [
-                "All Premium Membership features for up to 4 family members",
-                "Family fitness assessments",
-                "Discount on family fitness events",
-                "Access to family-oriented classes",
-                "Family meal planning session",
-                "Dedicated family lounge area"
-            ]
-        },
-        {
-            "id": 5,
-            "name": "Student Membership",
-            "price": 19.99,
-            "features": [
-                "Access to gym equipment",
-                "Use of locker rooms",
-                "Group fitness classes",
-                "Flexible contract terms",
-                "Access to study area with free Wi-Fi",
-                "Discount on fitness gear and supplements"
-            ]
-        }
     ]
     return (
-        <div>
+        <div className="m-12">
             <h2 className="text-5xl">Best Prices in the town</h2>
+            <div className="grid lg:grid-cols-3 gap-6">
             {
                 priceOptions.map(option => <PriceOption key={option.id} option ={option}></PriceOption>)
             }
+            </div>
         </div>
     );
 };
